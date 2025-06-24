@@ -6,9 +6,11 @@ import com.gestordetarefas.backend.repository.TaskRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.List;
 
+@CrossOrigin(origins = "https://localhost:3000")
 @RestController
 @RequestMapping("/api/tasks")
 public class TaskController {
