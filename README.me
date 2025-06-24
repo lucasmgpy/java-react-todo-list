@@ -1,0 +1,50 @@
+# Gestor de Tarefas - Aplicação Full-Stack
+
+Este é um projeto de estudo para criar uma aplicação completa de gestão de tarefas ("To-Do List"), com um backend em Java/Spring Boot e um frontend em React.
+
+## Tecnologias Utilizadas
+
+### Backend
+- **Java 17**
+- **Spring Boot 3**
+- **Spring Web:** Para a criação da API RESTful.
+- **Spring Data JPA:** Para a persistência de dados.
+- **H2 Database:** Base de dados em memória para desenvolvimento.
+- **Maven:** Gestor de dependências e build.
+
+### Frontend
+- **React**
+- **Node.js / npm**
+- **CSS** (para estilização)
+
+## Como Executar o Projeto
+
+Este projeto contém duas aplicações separadas que precisam de ser executadas em terminais diferentes.
+
+### 1. Executar o Backend (API)
+
+1.  Navegue para a pasta do backend:
+    ```bash
+    cd backend
+    ```
+2.  Execute a aplicação usando o Maven Wrapper:
+    ```bash
+    ./mvnw spring-boot:run
+    ```
+3.  A API estará disponível em `http://localhost:8080`.
+
+### 2. Executar o Frontend (Interface do Utilizador)
+
+1.  Navegue para a pasta do frontend (a partir da raiz do projeto):
+    ```bash
+    cd frontend
+    ```
+2.  Instale as dependências (só precisa de fazer isto da primeira vez):
+    ```bash
+    npm install
+    ```
+3.  Inicie o servidor de desenvolvimento:
+    ```bash
+    npm start
+    ```
+4.  A aplicação abrirá no seu browser em `http://localhost:3000`.

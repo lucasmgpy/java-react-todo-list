@@ -1,0 +1,10 @@
+# Ficheiros de configuração do IntelliJ IDEA
+.idea/
+*.iml
+
+# Ficheiros de Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# Ficheiros de Log
+*.log
