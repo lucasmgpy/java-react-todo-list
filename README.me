@@ -1,6 +1,17 @@
 # Gestor de Tarefas - Aplicação Full-Stack
 
-Este é um projeto de estudo para criar uma aplicação completa de gestão de tarefas ("To-Do List"), com um backend em Java/Spring Boot e um frontend em React.
+Este é um projeto de estudo para criar uma aplicação completa de gestão de tarefas ("To-Do List"), com um backend em Java/Spring Boot e um frontend em React. A aplicação foi construída com uma arquitetura profissional e inclui uma interface de utilizador rica e responsiva.
+
+## Funcionalidades Principais
+
+* **Gestão Completa de Tarefas (CRUD):** Criar, Ler, Atualizar e Apagar tarefas.
+* **Estados de Tarefa:** Cada tarefa pode ter um de quatro estados: Não Iniciado, Em Progresso, Em Pausa e Completo.
+* **Títulos e Descrições:** As tarefas incluem um título e um campo de descrição detalhada.
+* **Edição Inline:** Permite editar o título e a descrição diretamente na lista, sem mudar de página.
+* **Vista Dupla (Lista e Painel Kanban):** O utilizador pode alternar entre uma vista de lista tradicional e um painel Kanban com colunas para cada estado.
+* **UI Reativa:** As tarefas movem-se automaticamente entre colunas no painel Kanban quando o seu estado é alterado.
+* **Design Responsivo:** A interface adapta-se a diferentes tamanhos de ecrã, desde desktops a telemóveis.
+* **Interação Segura:** Inclui funcionalidades de UX como confirmação antes de apagar uma tarefa.
 
 ## Tecnologias Utilizadas
 
@@ -9,13 +20,15 @@ Este é um projeto de estudo para criar uma aplicação completa de gestão de t
 - **Spring Boot 3**
 - **Spring Web:** Para a criação da API RESTful.
 - **Spring Data JPA:** Para a persistência de dados.
+- **Arquitetura de 3 Camadas:** Controller, Service e Repository com tratamento de exceções customizado.
 - **H2 Database:** Base de dados em memória para desenvolvimento.
 - **Maven:** Gestor de dependências e build.
 
 ### Frontend
-- **React**
+- **React** (com Hooks: `useState`, `useEffect`)
 - **Node.js / npm**
-- **CSS** (para estilização)
+- **CSS Moderno:** Flexbox para layouts complexos e Media Queries para responsividade.
+- **Cliente API:** Fetch API para comunicação com o backend.
 
 ## Como Executar o Projeto
 
