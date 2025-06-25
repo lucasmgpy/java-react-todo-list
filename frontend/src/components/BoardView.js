@@ -15,7 +15,7 @@ function BoardView({ tasks, onUpdate, onDelete }) {
   return (
     <div className="board-view">
       {STATUS_ORDER.map(status => (
-        <div key={status} className="board-column">
+        <div key={status} className={`board-column status-bg-${status.toLowerCase()}`}>
           <h3>{STATUS_TITLES[status]}</h3>
           <ul>
             {tasks

@@ -1,45 +1,15 @@
 .task-item {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: box-shadow 0.2s ease-in-out;
 }
 
-.task-item:last-child {
-    border-bottom: none;
-}
-
-.task-item .task-title {
-    flex-grow: 1;
-}
-
-.task-item .task-controls {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.task-item select {
-    font-size: 0.8em;
-    padding: 4px 8px;
-    border-radius: 12px;
-    border: 1px solid #ccc;
-    background-color: #eee;
-}
-
-.task-item .delete-btn {
-    background: none;
-    border: none;
-    color: #dc3545;
-    cursor: pointer;
-    font-size: 1.2em;
-    padding: 5px;
-}
-
-.task-item .delete-btn:hover {
-    color: #a02430;
+.task-item:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .task-header {
@@ -47,23 +17,38 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    gap: 10px; /* Adiciona espaçamento entre título e controlos */
+}
+
+.task-title {
+    font-weight: 500;
+    flex-grow: 1;
+    word-break: break-word;
+}
+
+.task-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
 }
 
 .task-body {
-    margin-top: 10px;
-    padding-top: 10px;
+    margin-top: 12px;
+    padding-top: 12px;
     border-top: 1px dashed #eee;
     width: 100%;
     color: #666;
-    white-space: pre-wrap; /* Preserva quebras de linha na descrição */
+    white-space: pre-wrap;
+    word-break: break-word;
 }
 
-.expand-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1em;
-    color: #777;
+.task-body.preview {
+    font-style: italic;
+    color: #888;
+    border-top: none;
+    padding-top: 5px;
+    margin-top: 5px;
 }
 
 .edit-btn, .save-btn, .cancel-btn {
@@ -74,12 +59,37 @@
     padding: 5px;
     margin-left: 5px;
 }
-
 .edit-btn { color: #007bff; }
 .save-btn { color: #28a745; }
 .cancel-btn { color: #dc3545; }
 
-.task-body .editing-textarea {
+.expand-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    color: #777;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 5px;
+}
+.delete-btn:hover { color: #a02430; }
+
+.task-item .editing-input {
+    flex-grow: 1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 1em;
+}
+
+.task-item .editing-textarea {
     width: 100%;
     min-height: 80px;
     resize: vertical;
@@ -88,10 +98,31 @@
     padding: 5px;
 }
 
-.task-header .editing-input {
-    flex-grow: 1;
+.task-item select {
+    font-size: 0.8em;
+    padding: 4px 8px;
+    border-radius: 12px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 5px;
-    font-size: 1em;
+    background-color: #eee;
+}
+
+/* Cores para a vista de Lista */
+.task-item.status-nao_iniciado { background-color: #f8f9fa; border-left: 5px solid #6c757d; }
+.task-item.status-em_progresso { background-color: #fffbeb; border-left: 5px solid #ffc107; }
+.task-item.status-em_pausa { background-color: #fff3e0; border-left: 5px solid #fd7e14; }
+.task-item.status-completo { background-color: #e6ffed; border-left: 5px solid #28a745; }
+
+
+/* Media Query para o Header da Tarefa em ecrãs pequenos */
+@media (max-width: 480px) {
+  .task-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-header .task-controls {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 10px; /* Adiciona espaço quando quebra a linha */
+  }
 }

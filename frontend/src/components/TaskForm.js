@@ -40,6 +40,13 @@ function TaskForm({ onTaskAdded }) {
           onChange={(e) => setTitle(e.target.value)}
           required
         />
+        <div className="form-row">
+                <textarea
+                  placeholder="Descrição (opcional)..."
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
+                />
+              </div>
         <select value={status} onChange={(e) => setStatus(e.target.value)}>
           <option value="NAO_INICIADO">Não Iniciado</option>
           <option value="EM_PROGRESSO">Em Progresso</option>
@@ -48,13 +55,7 @@ function TaskForm({ onTaskAdded }) {
         </select>
         <button type="submit">Adicionar</button>
       </div>
-      <div className="form-row">
-        <textarea
-          placeholder="Descrição (opcional)..."
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        />
-      </div>
+
     </form>
   );
 }

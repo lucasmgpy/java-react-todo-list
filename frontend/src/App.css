@@ -6,8 +6,15 @@ body {
 }
 
 .App {
-    max-width: 600px;
-    margin: 0 auto;
+    /* A nova largura máxima para ecrãs grandes. Aumentamos bastante. */
+    max-width: 1600px;
+
+    /* A largura será 90% do ecrã, mas nunca ultrapassará os 1600px. */
+    width: 90%;
+
+    /* Adicionamos uma margem no topo e em baixo (20px) e mantemos o 'auto' para centrar. */
+    margin: 20px auto;
+
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
