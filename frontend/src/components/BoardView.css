@@ -40,8 +40,6 @@
 .board-column.status-bg-em_pausa { background-color: #fff3e0; }
 .board-column.status-bg-completo { background-color: #e6ffed; }
 
-/* Sobrescreve a cor de fundo do item quando está dentro de uma board */
-.board-column .task-item {
-    background-color: #ffffff; /* Fundo branco para maior contraste */
-    /* border-left: 5px solid transparent; /* Remove a borda colorida da vista de lista */
+.board-view .board-column .task-item {
+    background-color: #ffffff !important;
 }
