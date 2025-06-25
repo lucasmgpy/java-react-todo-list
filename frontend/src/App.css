@@ -42,3 +42,22 @@ li span {
     background-color: #eee;
     color: #555;
 }
+
+.view-switcher {
+    margin-bottom: 20px;
+}
+
+.view-switcher button {
+    padding: 8px 15px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.view-switcher button.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
