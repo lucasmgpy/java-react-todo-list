@@ -49,8 +49,10 @@ public class TaskServiceImpl implements TaskService {
         Task existingTask = getTaskById(id); // Reutiliza o método que já lança a exceção se não encontrar
 
         existingTask.setTitle(taskDetails.getTitle());
+        existingTask.setDescription(taskDetails.getDescription());
         existingTask.setStatus(taskDetails.getStatus());
-        // Se adicionarmos mais campos, como a descrição, atualizamo-los aqui também.
+
+        // adicionar mais campos aqui
 
         return taskRepository.save(existingTask);
     }

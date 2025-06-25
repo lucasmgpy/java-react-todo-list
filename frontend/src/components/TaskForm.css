@@ -3,22 +3,33 @@
     padding-top: 20px;
     border-top: 1px solid #eee;
     display: flex;
+    flex-direction: column; /* Organiza as linhas em coluna */
     gap: 10px;
-    align-items: center;
 }
 
-.task-form input, .task-form select {
+.form-row {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+.form-row input, .form-row select, .form-row textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1em;
 }
 
-.task-form input {
-    flex-grow: 1; /* Faz o input do título ocupar o espaço disponível */
+.form-row input, .form-row textarea {
+    flex-grow: 1;
 }
 
-.task-form button {
+.form-row textarea {
+    resize: vertical; /* Permite redimensionar a altura */
+    min-height: 40px;
+}
+
+.form-row button {
     padding: 10px 20px;
     border: none;
     background-color: #28a745;
@@ -28,6 +39,6 @@
     cursor: pointer;
 }
 
-.task-form button:hover {
+.form-row button:hover {
     background-color: #218838;
 }
